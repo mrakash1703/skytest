@@ -2942,7 +2942,7 @@ function loadRedemptionRulesEditData() {
 
 						}
 
-						if ($scope.formData.recurtypecheck == 'N' || $scope.formData.recurtypecheck == undefined) {
+						if ($scope.formData.recurtypecheck == 'N' || $scope.formData.recurtypecheck == undefined || $scope.formData.recurtypecheck) {
 							$scope.formData.recurrenceflag = "N";
 							if ($scope.formData.endtype == "NED") {
 								$scope.formData.endtype = "";
@@ -2963,7 +2963,7 @@ function loadRedemptionRulesEditData() {
 						} else {
 							$scope.formData.frequency = "null";
 						}
-						if ($scope.formData.recurtypecheck == 'N' || $scope.formData.recurtypecheck == undefined) {
+						if ($scope.formData.recurtypecheck == 'N' || $scope.formData.recurtypecheck == undefined || $scope.formData.recurtypecheck) {
 							$scope.formData.recurtype = "N";
 							$scope.formData.dayflag = null;
 							$scope.formData.enddate = null;
@@ -3283,7 +3283,7 @@ function loadRedemptionRulesEditData() {
 								"lrw_rewards_unit": "S",
 								"lrw_rewards_actiontype": "S",
 								"lrw_sub_unit": "S",
-								"lrw_earn_accumulation_unit": "N",
+								"lrw_earn_accumulation_unit": "S",
 								"lrw_applied_value": "N",
 								"lrw_percentage_value": "S",
 								"parent_reward_unit": "S"
@@ -3311,7 +3311,7 @@ function loadRedemptionRulesEditData() {
 										externalId + '_' + response.keyValue,
 										$scope.accumulationId, $rootScope.sourceId,
 										shortName, longName);
-									jAlert("Rewards added successfully");
+									jAlert("Rewards added successfully good");
 								})['catch'](function(reason) {
 									$scope.error = reason;
 									jAlert("Failed to add rewards");
