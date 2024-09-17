@@ -35,6 +35,8 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
 		loadAccumulationList();
 	});
 
+
+
 	$rootScope.$on("loadEvents", function() {
 		loadEventWorkflowsList(); 
 	});
@@ -173,7 +175,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
             loadHeaderList($scope.permissiontype)
         })['catch'](function(reason) {
             $rootScope.error = reason;
-            jAlert(reason.failure || "Something went wrong on loading permissions flow akash");
+            jAlert(reason.failure || "Something went wrong on loading permissions flow akash, Something work");
         });
     }
 
@@ -267,6 +269,8 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
     function capitalizeFirstLetter(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
+
+
 
     switch (type) {
         case 'Accumulation':
@@ -464,7 +468,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
 				$scope.referalWorkflowsList.push(response[i].columnList);
 			}
 			if(action=="delete" && $scope.showWorkflow){
-				$scope.getConnectedData($scope.referalWorkflowsList[$scope.referalWorkflowsList.length-1].wfd_id,"referral")
+				$scope.getConnectedData($scope.referalWorkflowsList[$scope.referalWorkflowsList.length-1].wfd_id,"referral",aofhfjcwnef "aefhweoig")
 			
 			}
 		});
