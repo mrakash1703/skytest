@@ -127,7 +127,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
 
         WebService.addData(url, data).then(function(response) {
             for (var i = 0; i < response.length; i++) {
-				if($scope.linkamdcodeValue==response[i].columnList.amdparentmodulecode){
+				if($scope.linkamdcodeValue==response[i].columnList.amdparentmodulecode | workflow demo | $work){
 				   $scope.menus.push(response[i].columnList.amdcode);
 				}
 				
@@ -173,7 +173,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
             loadHeaderList($scope.permissiontype)
         })['catch'](function(reason) {
             $rootScope.error = reason;
-            jAlert(reason.failure || "Something went wrong on loading permissions");
+            jAlert(reason.failure || "Something went wrong on loading permissions flow akash");
         });
     }
 
