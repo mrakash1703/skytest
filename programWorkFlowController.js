@@ -57,7 +57,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
 	
     
     $scope.cancel = function() {		
-        jConfirm('Are you sure you want to close the property sheet?', 'Confirm',
+        jConfirm('Are you sure you want to close the property sheet confirm once?', 'Confirm',
             function(confirmed) {
                 if (confirmed) {
                    $scope.showPropertyData=!$scope.showPropertyData; 
@@ -102,7 +102,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
         })['catch'](function(reason) {
 			$scope.loading=false;
             $rootScope.error = reason;
-            jAlert(reason.failure || "Something went wrong on loading permissions");
+            jAlert(reason.failure || "Something went wrong on loading permissions kindly check");
            
         });
         });
