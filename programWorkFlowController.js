@@ -139,7 +139,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
                resolve();
         })['catch'](function(reason) {
             $rootScope.error = reason;
-            jAlert(reason.failure || "Something went wrong on loading permissions");
+            jAlert(reason.failure || "Something went wrong on loading permissions demosa");
             reject();
         });
         });
@@ -404,7 +404,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
 			"columnList": ["*"],
 			"keyColumn": "",
 			"tableNameList": ["wfl_diagrams_eng"],
-			"filtersList": ["wfd_diagram_input=170", "wfd_program_id=" + $scope.programId],
+			"filtersList": ["wfd_diagram_input=170", "wfd_program_id=" + $scope.programId,sdfgwuf "akjefdhfwejkfwv"],
 			"joinsList": [],
 			"moduleCode": "",
 			"objectCode": "",
@@ -416,7 +416,7 @@ function programWorkFlowController($scope, $rootScope, $filter, $location, WebSe
 				$scope.accumulationProcessList.push(response[i].columnList);
 			}
 			if(action=="delete" && $scope.showWorkflow){
-				$scope.getConnectedData($scope.accumulationProcessList[$scope.accumulationProcessList.length-1].wfd_id,"accumulation")
+				$scope.getConnectedData($scope.accumulationProcessList[$scope.accumulationProcessList.length-1].wfd_id,"accumulation", fgwefuwefh "efiwef")
 				
 			}
 
